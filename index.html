@@ -275,56 +275,62 @@
     <!-- ================= HALAMAN ABOUT US (UPDATED) ================= -->
     <div id="about" class="page-section">
         
-        <!-- HERO BANNER FULL SCREEN (CHANDRA ASRI STYLE) -->
-        <div class="relative w-full h-[80vh] md:h-screen flex items-center justify-start overflow-hidden">
-            <!-- Background Image -->
-            <div class="absolute inset-0 z-0">
-                <img src="Foto%20Kepengurusan.jpeg" alt="Foto Kepengurusan Lab" class="w-full h-full object-cover" onerror="this.style.display='none'">
-                <!-- Gradient Overlay untuk teks agar terbaca -->
-                <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent"></div>
+        <!-- HERO BANNER FULL WIDTH (NO CROP) -->
+        <div class="relative w-full min-h-[50vh] flex flex-col justify-start">
+            
+            <!-- Foto Kepengurusan Full Width & Proportional Height -->
+            <div class="w-full relative">
+                <!-- Gunakan w-full dan h-auto agar gambar menyesuaikan lebar layar dan tinggi otomatis (tidak terpotong) -->
+                <img src="Foto%20Kepengurusan.jpeg" alt="Foto Kepengurusan Lab" class="w-full h-auto object-contain" onerror="this.style.display='none'">
+                
+                <!-- Gradient Overlay di bagian bawah foto agar transisi ke teks lebih halus -->
+                <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                
+                <!-- Teks overlay di atas foto bagian bawah -->
+                <div class="absolute bottom-0 left-0 w-full p-6 md:p-10 z-10">
+                    <div class="max-w-7xl mx-auto">
+                        <span class="text-cyan-400 font-bold tracking-[0.3em] text-xs md:text-sm mb-2 block uppercase shadow-black drop-shadow-md" data-i18n="about_subtitle">PROFIL LABORATORIUM</span>
+                        <h1 class="text-3xl md:text-6xl font-black tracking-tighter uppercase leading-tight text-white drop-shadow-lg" data-i18n="about_title">
+                            Tentang Kami
+                        </h1>
+                    </div>
+                </div>
             </div>
 
-            <!-- Text Content over Image -->
-            <div class="relative z-10 w-full max-w-7xl mx-auto px-5 md:px-10 mt-16 md:mt-0">
-                <div class="max-w-2xl">
-                    <span class="text-cyan-400 font-bold tracking-[0.3em] text-xs md:text-sm mb-4 block uppercase" data-i18n="about_subtitle">PROFIL LABORATORIUM</span>
-                    <h1 class="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-tight mb-6 text-white" data-i18n="about_title">
-                        Tentang Kami
-                    </h1>
-                    <p class="text-base md:text-xl text-gray-200 leading-relaxed text-justify mb-8 border-l-4 border-cyan-500 pl-6" data-i18n="about_desc">
+            <!-- Konten Teks di bawah foto -->
+            <div class="content-box py-10 px-5 md:px-0">
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-base md:text-xl text-gray-200 leading-relaxed text-justify mb-12 border-l-4 border-cyan-500 pl-6" data-i18n="about_desc">
                         Laboratorium di Perguruan Tinggi merupakan salah satu komponen yang sangat penting dalam mewujudkan fungsi dari Tridharma Perguruan Tinggi. Laboratorium Fisika Fakultas Teknik Universitas Sultan Ageng Tirtayasa (UNTIRTA) sendiri merupakan laboratorium di bawah naungan Fakultas Teknik UNTIRTA yang mewadahi segala kegiatan terkait bidang fisika guna menjalankan Tridharma Perguruan Tinggi itu sendiri.
                     </p>
                 </div>
-            </div>
-        </div>
 
-        <!-- VISI & MISI SECTION -->
-        <div class="content-box py-20 px-5 md:px-0">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                <!-- Visi -->
-                <div class="glass p-8 md:p-12 border-l-4 border-cyan-500">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-white" data-i18n="vision_title">VISI</h3>
-                    <p class="text-base md:text-lg text-gray-300 leading-relaxed text-justify" data-i18n="vision_desc">
-                        Menjadikan laboratorium fisika terapan sebagai sarana pengajaran dan pengembangan yang berkualitas serta berintegritas dengan menjunjung tinggi profesionalitas untuk menjadikan mahasiswa yang unggul dan kompeten, sebagai bentuk membantu mewujudkan visi dan misi fakultas teknik Untirta.
-                    </p>
-                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mt-12">
+                    <!-- Visi -->
+                    <div class="glass p-8 md:p-12 border-l-4 border-cyan-500">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-6 text-white" data-i18n="vision_title">VISI</h3>
+                        <p class="text-base md:text-lg text-gray-300 leading-relaxed text-justify" data-i18n="vision_desc">
+                            Menjadikan laboratorium fisika terapan sebagai sarana pengajaran dan pengembangan yang berkualitas serta berintegritas dengan menjunjung tinggi profesionalitas untuk menjadikan mahasiswa yang unggul dan kompeten, sebagai bentuk membantu mewujudkan visi dan misi fakultas teknik Untirta.
+                        </p>
+                    </div>
 
-                <!-- Misi -->
-                <div class="glass p-8 md:p-12 border-l-4 border-white">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-white" data-i18n="mission_title">MISI</h3>
-                    <ul class="list-disc list-outside ml-5 text-base md:text-lg text-gray-300 space-y-4 text-justify" data-i18n="mission_list">
-                        <li>Mendorong budaya kolaboratif dengan meningkatkan inisiatif dan kepedulian antar asisten demi tercapainya kinerja tim yang saling mendukung.</li>
-                        <li>Menjadi fasilitator yang TOP (tanggungjawab, objektif, dan profesional) dalam berjalannya kegiatan praktikum.</li>
-                        <li>Menjalin kerja sama dan komunikasi yang baik secara internal maupun eksternal.</li>
-                        <li>Mendukung kegiatan riset atau penelitian melalui penyediaan fasilitas dan sarana laboratorium yang memadai.</li>
-                    </ul>
+                    <!-- Misi -->
+                    <div class="glass p-8 md:p-12 border-l-4 border-white">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-6 text-white" data-i18n="mission_title">MISI</h3>
+                        <ul class="list-disc list-outside ml-5 text-base md:text-lg text-gray-300 space-y-4 text-justify" data-i18n="mission_list">
+                            <li>Mendorong budaya kolaboratif dengan meningkatkan inisiatif dan kepedulian antar asisten demi tercapainya kinerja tim yang saling mendukung.</li>
+                            <li>Menjadi fasilitator yang TOP (tanggungjawab, objektif, dan profesional) dalam berjalannya kegiatan praktikum.</li>
+                            <li>Menjalin kerja sama dan komunikasi yang baik secara internal maupun eksternal.</li>
+                            <li>Mendukung kegiatan riset atau penelitian melalui penyediaan fasilitas dan sarana laboratorium yang memadai.</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="mt-20 text-center">
-                 <button onclick="switchPage('home')" class="px-8 py-3 border border-white/30 rounded-full text-sm font-bold hover:bg-white hover:text-black transition" data-i18n="btn_back_home">
-                    ← Kembali ke Beranda
-                </button>
+                
+                <div class="mt-20 text-center">
+                     <button onclick="switchPage('home')" class="px-8 py-3 border border-white/30 rounded-full text-sm font-bold hover:bg-white hover:text-black transition" data-i18n="btn_back_home">
+                        ← Kembali ke Beranda
+                    </button>
+                </div>
             </div>
         </div>
     </div>
