@@ -124,27 +124,29 @@
             </div>
 
             <!-- DESKTOP MENU -->
-            <div class="hidden md:flex items-center gap-8">
-                <div class="flex space-x-8 text-sm font-bold uppercase tracking-widest text-gray-300">
+            <div class="hidden xl:flex items-center gap-6">
+                <div class="flex space-x-6 text-xs font-bold uppercase tracking-widest text-gray-300">
                     <a onclick="switchPage('home')" class="nav-link hover:text-white transition-colors" data-i18n="nav_home">Home</a>
                     <a onclick="switchPage('about')" class="nav-link hover:text-white transition-colors" data-i18n="nav_about">About Us</a>
+                    <a onclick="switchPage('activities')" class="nav-link hover:text-white transition-colors" data-i18n="nav_activities">Activities</a>
+                    <a onclick="switchPage('announcements')" class="nav-link hover:text-white transition-colors" data-i18n="nav_announcements">Announcements</a>
                     <a onclick="switchPage('asisten')" class="nav-link hover:text-white transition-colors" data-i18n="nav_asisten">Contact Assistant</a>
                     <a onclick="switchPage('struktur')" class="nav-link hover:text-white transition-colors" data-i18n="nav_structure">Lab Structure</a>
                 </div>
 
                 <!-- LANGUAGE SWITCHER (DESKTOP) -->
                 <div class="relative">
-                    <button id="langBtn" class="flex items-center gap-2 text-sm font-bold text-white border border-white/20 px-3 py-1.5 rounded-full hover:bg-white/10 transition">
-                        <span class="text-lg">🌐</span> <span id="currentLangLabel">ID</span> <span class="text-xs">▼</span>
+                    <button id="langBtn" class="flex items-center gap-2 text-xs font-bold text-white border border-white/20 px-3 py-1.5 rounded-full hover:bg-white/10 transition">
+                        <span class="text-base">🌐</span> <span id="currentLangLabel">ID</span> <span class="text-[10px]">▼</span>
                     </button>
                     <div id="langDropdown" class="lang-dropdown absolute right-0 mt-2 w-40 bg-[#0a1931] border border-white/10 rounded-xl shadow-2xl overflow-hidden backdrop-blur-xl">
-                        <button onclick="setLanguage('id')" class="w-full text-left px-4 py-3 hover:bg-white/10 text-sm font-medium transition flex items-center gap-2">
+                        <button onclick="setLanguage('id')" class="w-full text-left px-4 py-3 hover:bg-white/10 text-xs font-medium transition flex items-center gap-2">
                             🇮🇩 Indonesia
                         </button>
-                        <button onclick="setLanguage('en')" class="w-full text-left px-4 py-3 hover:bg-white/10 text-sm font-medium transition flex items-center gap-2">
+                        <button onclick="setLanguage('en')" class="w-full text-left px-4 py-3 hover:bg-white/10 text-xs font-medium transition flex items-center gap-2">
                             🇬🇧 English
                         </button>
-                        <button onclick="setLanguage('ja')" class="w-full text-left px-4 py-3 hover:bg-white/10 text-sm font-medium transition flex items-center gap-2">
+                        <button onclick="setLanguage('ja')" class="w-full text-left px-4 py-3 hover:bg-white/10 text-xs font-medium transition flex items-center gap-2">
                             🇯🇵 日本語
                         </button>
                     </div>
@@ -152,21 +154,23 @@
             </div>
 
             <!-- MOBILE BURGER BUTTON -->
-            <button class="md:hidden text-white p-2 focus:outline-none" onclick="toggleMobileMenu()">
+            <button class="xl:hidden text-white p-2 focus:outline-none" onclick="toggleMobileMenu()">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
 
         <!-- MOBILE MENU OVERLAY -->
-        <div id="mobileMenu" class="mobile-menu md:hidden absolute top-full left-0 w-full bg-[#0a1931]/95 backdrop-blur-xl border-t border-white/10 shadow-2xl p-6">
-            <div class="flex flex-col space-y-4 font-bold text-gray-300">
+        <div id="mobileMenu" class="mobile-menu xl:hidden absolute top-full left-0 w-full bg-[#0a1931]/95 backdrop-blur-xl border-t border-white/10 shadow-2xl p-6">
+            <div class="flex flex-col space-y-4 font-bold text-gray-300 text-sm">
                 <a onclick="switchPage('home'); toggleMobileMenu()" class="block py-2 border-b border-white/5 hover:text-cyan-400" data-i18n="nav_home">Home</a>
                 <a onclick="switchPage('about'); toggleMobileMenu()" class="block py-2 border-b border-white/5 hover:text-cyan-400" data-i18n="nav_about">About Us</a>
+                <a onclick="switchPage('activities'); toggleMobileMenu()" class="block py-2 border-b border-white/5 hover:text-cyan-400" data-i18n="nav_activities">Activities</a>
+                <a onclick="switchPage('announcements'); toggleMobileMenu()" class="block py-2 border-b border-white/5 hover:text-cyan-400" data-i18n="nav_announcements">Announcements</a>
                 <a onclick="switchPage('asisten'); toggleMobileMenu()" class="block py-2 border-b border-white/5 hover:text-cyan-400" data-i18n="nav_asisten">Contact Assistant</a>
                 <a onclick="switchPage('struktur'); toggleMobileMenu()" class="block py-2 border-b border-white/5 hover:text-cyan-400" data-i18n="nav_structure">Lab Structure</a>
                 
                 <div class="pt-4">
-                    <p class="text-xs text-gray-500 mb-3 uppercase tracking-widest">Language</p>
+                    <p class="text-[10px] text-gray-500 mb-3 uppercase tracking-widest">Language</p>
                     <div class="flex gap-2">
                         <button onclick="setLanguage('id'); toggleMobileMenu()" class="flex-1 py-2 text-xs border border-white/20 rounded hover:bg-white/10">🇮🇩 ID</button>
                         <button onclick="setLanguage('en'); toggleMobileMenu()" class="flex-1 py-2 text-xs border border-white/20 rounded hover:bg-white/10">🇬🇧 EN</button>
@@ -299,6 +303,105 @@
                     ← Kembali ke Beranda
                 </button>
             </div>
+        </div>
+    </div>
+
+    <!-- ================= HALAMAN ACTIVITIES (BARU) ================= -->
+    <div id="activities" class="page-section">
+        <div class="content-box">
+            <span class="text-cyan-400 font-bold tracking-[0.2em] text-xs mb-2 block uppercase" data-i18n="activities_subtitle">DOKUMENTASI</span>
+            <h1 class="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-tight mb-8" data-i18n="activities_title">
+                Galeri Kegiatan
+            </h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Placeholder Card 1 -->
+                <div class="glass p-0 overflow-hidden group">
+                    <div class="h-48 bg-gray-800 relative">
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-bold">
+                            <span data-i18n="img_placeholder">Image Here</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 group-hover:text-cyan-400 transition" data-i18n="act_title_1">Praktikum Fisika Dasar</h3>
+                        <p class="text-sm text-gray-400 mb-4" data-i18n="act_desc_1">Kegiatan praktikum rutin mahasiswa semester ganjil.</p>
+                        <span class="text-[10px] bg-white/10 px-2 py-1 rounded text-cyan-300">2025</span>
+                    </div>
+                </div>
+
+                <!-- Placeholder Card 2 -->
+                <div class="glass p-0 overflow-hidden group">
+                    <div class="h-48 bg-gray-800 relative">
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-bold">
+                            <span data-i18n="img_placeholder">Image Here</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 group-hover:text-cyan-400 transition" data-i18n="act_title_2">Pelatihan Asisten</h3>
+                        <p class="text-sm text-gray-400 mb-4" data-i18n="act_desc_2">Peningkatan kompetensi dan integritas asisten laboratorium.</p>
+                        <span class="text-[10px] bg-white/10 px-2 py-1 rounded text-cyan-300">2025</span>
+                    </div>
+                </div>
+
+                <!-- Placeholder Card 3 -->
+                <div class="glass p-0 overflow-hidden group">
+                    <div class="h-48 bg-gray-800 relative">
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-bold">
+                            <span data-i18n="img_placeholder">Image Here</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 group-hover:text-cyan-400 transition" data-i18n="act_title_3">Kunjungan Industri</h3>
+                        <p class="text-sm text-gray-400 mb-4" data-i18n="act_desc_3">Studi banding ke industri terkait fisika terapan.</p>
+                        <span class="text-[10px] bg-white/10 px-2 py-1 rounded text-cyan-300">2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <button onclick="switchPage('home')" class="px-6 py-2 border border-white/30 rounded-full text-sm font-bold hover:bg-white hover:text-black transition" data-i18n="btn_back_home">
+                   ← Kembali ke Beranda
+               </button>
+           </div>
+        </div>
+    </div>
+
+    <!-- ================= HALAMAN ANNOUNCEMENTS (BARU) ================= -->
+    <div id="announcements" class="page-section">
+        <div class="content-box">
+            <span class="text-cyan-400 font-bold tracking-[0.2em] text-xs mb-2 block uppercase" data-i18n="announcements_subtitle">INFORMASI TERBARU</span>
+            <h1 class="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-tight mb-8" data-i18n="announcements_title">
+                Papan Pengumuman
+            </h1>
+
+            <div class="space-y-6 max-w-3xl">
+                <!-- Announcement Item 1 -->
+                <div class="glass p-6 border-l-4 border-cyan-500 hover:bg-white/5 transition">
+                    <span class="text-xs text-gray-500 font-mono mb-2 block">10 Feb 2026</span>
+                    <h3 class="text-xl font-bold text-white mb-2" data-i18n="ann_title_1">Jadwal Responsi Modul 1</h3>
+                    <p class="text-gray-400 text-sm" data-i18n="ann_desc_1">Responsi untuk modul pertama akan dilaksanakan minggu depan. Harap persiapkan diri.</p>
+                </div>
+
+                <!-- Announcement Item 2 -->
+                <div class="glass p-6 border-l-4 border-white hover:bg-white/5 transition">
+                    <span class="text-xs text-gray-500 font-mono mb-2 block">05 Feb 2026</span>
+                    <h3 class="text-xl font-bold text-white mb-2" data-i18n="ann_title_2">Penerimaan Asisten Baru</h3>
+                    <p class="text-gray-400 text-sm" data-i18n="ann_desc_2">Open recruitment untuk asisten laboratorium periode genap telah dibuka. Silakan cek detail di Instagram.</p>
+                </div>
+
+                <!-- Announcement Item 3 -->
+                <div class="glass p-6 border-l-4 border-gray-700 hover:bg-white/5 transition opacity-70">
+                    <span class="text-xs text-gray-500 font-mono mb-2 block">20 Jan 2026</span>
+                    <h3 class="text-xl font-bold text-white mb-2" data-i18n="ann_title_3">Libur Operasional Lab</h3>
+                    <p class="text-gray-400 text-sm" data-i18n="ann_desc_3">Laboratorium akan tutup sementara selama masa libur semester.</p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center sm:text-left">
+                <button onclick="switchPage('home')" class="px-6 py-2 border border-white/30 rounded-full text-sm font-bold hover:bg-white hover:text-black transition" data-i18n="btn_back_home">
+                   ← Kembali ke Beranda
+               </button>
+           </div>
         </div>
     </div>
 
@@ -538,6 +641,8 @@
             id: {
                 nav_home: "Beranda",
                 nav_about: "Tentang Kami",
+                nav_activities: "Kegiatan",
+                nav_announcements: "Pengumuman",
                 nav_asisten: "Kontak Asisten",
                 nav_structure: "Struktur Lab",
                 hero_subtitle: "LABORATORIUM PENDIDIKAN",
@@ -572,6 +677,23 @@
                     <li>Menjalin kerja sama dan komunikasi yang baik secara internal maupun eksternal.</li>
                     <li>Mendukung kegiatan riset atau penelitian melalui penyediaan fasilitas dan sarana laboratorium yang memadai.</li>
                 `,
+                activities_subtitle: "DOKUMENTASI",
+                activities_title: "Galeri Kegiatan",
+                act_title_1: "Praktikum Fisika Dasar",
+                act_desc_1: "Kegiatan praktikum rutin mahasiswa semester ganjil.",
+                act_title_2: "Pelatihan Asisten",
+                act_desc_2: "Peningkatan kompetensi dan integritas asisten laboratorium.",
+                act_title_3: "Kunjungan Industri",
+                act_desc_3: "Studi banding ke industri terkait fisika terapan.",
+                img_placeholder: "Foto Kegiatan",
+                announcements_subtitle: "INFORMASI TERBARU",
+                announcements_title: "Papan Pengumuman",
+                ann_title_1: "Jadwal Responsi Modul 1",
+                ann_desc_1: "Responsi untuk modul pertama akan dilaksanakan minggu depan. Harap persiapkan diri.",
+                ann_title_2: "Penerimaan Asisten Baru",
+                ann_desc_2: "Open recruitment untuk asisten laboratorium periode genap telah dibuka. Silakan cek detail di Instagram.",
+                ann_title_3: "Libur Operasional Lab",
+                ann_desc_3: "Laboratorium akan tutup sementara selama masa libur semester.",
                 btn_back_home: "← Kembali ke Beranda",
                 struct_subtitle: "ORGANISASI",
                 struct_title: "Struktur Organisasi <br>Laboratorium",
@@ -596,6 +718,8 @@
             en: {
                 nav_home: "Home",
                 nav_about: "About Us",
+                nav_activities: "Activities",
+                nav_announcements: "Announcements",
                 nav_asisten: "Contact Assistant",
                 nav_structure: "Lab Structure",
                 hero_subtitle: "EDUCATIONAL LABORATORY",
@@ -630,6 +754,23 @@
                     <li>Establishing good cooperation and communication both internally and externally.</li>
                     <li>Supporting research activities through the provision of adequate laboratory facilities and infrastructure.</li>
                 `,
+                activities_subtitle: "DOCUMENTATION",
+                activities_title: "Activity Gallery",
+                act_title_1: "Basic Physics Practicum",
+                act_desc_1: "Routine practicum activities for odd semester students.",
+                act_title_2: "Assistant Training",
+                act_desc_2: "Competency and integrity improvement for lab assistants.",
+                act_title_3: "Industrial Visit",
+                act_desc_3: "Comparative study to applied physics related industries.",
+                img_placeholder: "Activity Photo",
+                announcements_subtitle: "LATEST UPDATES",
+                announcements_title: "Announcement Board",
+                ann_title_1: "Module 1 Response Schedule",
+                ann_desc_1: "Response for the first module will be held next week. Please prepare yourself.",
+                ann_title_2: "New Assistant Recruitment",
+                ann_desc_2: "Open recruitment for even period lab assistants is open. Check details on Instagram.",
+                ann_title_3: "Lab Operational Holiday",
+                ann_desc_3: "The laboratory will be temporarily closed during the semester break.",
                 btn_back_home: "← Back to Home",
                 struct_subtitle: "ORGANIZATION",
                 struct_title: "Organizational <br>Structure",
@@ -654,6 +795,8 @@
             ja: {
                 nav_home: "ホーム",
                 nav_about: "私たちについて",
+                nav_activities: "活動",
+                nav_announcements: "お知らせ",
                 nav_asisten: "アシスタントへの連絡",
                 nav_structure: "ラボの体制",
                 hero_subtitle: "教育研究所",
@@ -688,6 +831,23 @@
                     <li>内部および外部との良好な協力関係とコミュニケーションを確立する。</li>
                     <li>適切な実験室の設備とインフラの提供を通じて、研究活動を支援する。</li>
                 `,
+                activities_subtitle: "ドキュメンテーション",
+                activities_title: "活動ギャラリー",
+                act_title_1: "基礎物理学実習",
+                act_desc_1: "奇数学期の学生向けの定期的な実習活動。",
+                act_title_2: "アシスタントトレーニング",
+                act_desc_2: "ラボアシスタントの能力と誠実さの向上。",
+                act_title_3: "産業訪問",
+                act_desc_3: "応用物理学関連産業への比較研究。",
+                img_placeholder: "活動写真",
+                announcements_subtitle: "最新情報",
+                announcements_title: "掲示板",
+                ann_title_1: "モジュール1のレスポンシスケジュール",
+                ann_desc_1: "最初のモジュールのレスポンシは来週行われます。準備してください。",
+                ann_title_2: "新アシスタント募集",
+                ann_desc_2: "偶数期ラボアシスタントの公開募集を開始しました。詳細はInstagramを確認してください。",
+                ann_title_3: "ラボ運営休止",
+                ann_desc_3: "学期休みのため、実験室は一時的に閉鎖されます。",
                 btn_back_home: "← ホームに戻る",
                 struct_subtitle: "組織",
                 struct_title: "ラボの <br>組織図",
