@@ -49,10 +49,10 @@
             animation: fadeIn 0.5s ease-out;
         }
 
-        /* Override padding for specific sections if needed */
+        /* Khusus untuk About Us agar Full Screen */
         #about.page-section {
-            padding-left: 0;
-            padding-right: 0;
+            padding: 0 !important;
+            max-width: 100% !important;
         }
 
         @media (min-width: 768px) {
@@ -63,8 +63,7 @@
                 padding-right: 10%;
             }
             #about.page-section {
-                padding-left: 0;
-                padding-right: 0;
+                padding: 0 !important;
             }
         }
         
@@ -346,7 +345,7 @@
         </div>
     </div>
 
-    <!-- ================= HALAMAN ACTIVITIES ================= -->
+    <!-- ================= HALAMAN ACTIVITIES (UPDATED) ================= -->
     <div id="activities" class="page-section" style="padding-left: 5%; padding-right: 5%;">
         <div class="content-box">
             <span class="text-cyan-400 font-bold tracking-[0.2em] text-xs mb-2 block uppercase" data-i18n="activities_subtitle">DOKUMENTASI</span>
@@ -357,11 +356,12 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Studi Banding -->
                 <div class="glass p-0 overflow-hidden group rounded-xl">
-                    <div class="h-56 bg-gray-800 relative overflow-hidden">
-                        <img src="Studi%20Banding.jpeg" alt="Studi Banding" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="w-full relative overflow-hidden">
+                        <img src="Studi%20Banding.jpeg" alt="Studi Banding" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                         <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-bold bg-gray-900" style="display: none;">
                             <span data-i18n="img_placeholder">Foto Kegiatan</span>
                         </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 group-hover:text-cyan-400 transition" data-i18n="act_title_1">Studi Banding Institusi</h3>
@@ -372,11 +372,12 @@
 
                 <!-- Sosialisasi Praktikum -->
                 <div class="glass p-0 overflow-hidden group rounded-xl">
-                    <div class="h-56 bg-gray-800 relative overflow-hidden">
-                        <img src="Sosialisasi%20Praktikum.jpeg" alt="Sosialisasi Praktikum" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="w-full relative overflow-hidden">
+                        <img src="Sosialisasi%20Praktikum.jpeg" alt="Sosialisasi Praktikum" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                         <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-bold bg-gray-900" style="display: none;">
                             <span data-i18n="img_placeholder">Foto Kegiatan</span>
                         </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 group-hover:text-cyan-400 transition" data-i18n="act_title_2">Sosialisasi & Orientasi</h3>
@@ -387,11 +388,12 @@
 
                 <!-- Asistensi Praktikum -->
                 <div class="glass p-0 overflow-hidden group rounded-xl">
-                    <div class="h-56 bg-gray-800 relative overflow-hidden">
-                        <img src="Asistensi.jpeg" alt="Asistensi Praktikum" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="w-full relative overflow-hidden">
+                        <img src="Asistensi.jpeg" alt="Asistensi Praktikum" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                         <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-bold bg-gray-900" style="display: none;">
                             <span data-i18n="img_placeholder">Foto Kegiatan</span>
                         </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 group-hover:text-cyan-400 transition" data-i18n="act_title_3">Asistensi & Mentoring</h3>
@@ -424,13 +426,16 @@
                     <h3 class="text-xl font-bold text-white mb-2" data-i18n="ann_title_1">Jadwal Responsi Modul 1</h3>
                     <p class="text-gray-400 text-sm" data-i18n="ann_desc_1">Responsi untuk modul pertama akan dilaksanakan minggu depan. Harap persiapkan diri.</p>
                 </div>
-                <!-- ... other items ... -->
-                 <div class="glass p-6 border-l-4 border-white hover:bg-white/5 transition">
+
+                <!-- Announcement Item 2 -->
+                <div class="glass p-6 border-l-4 border-white hover:bg-white/5 transition">
                     <span class="text-xs text-gray-500 font-mono mb-2 block">05 Feb 2026</span>
                     <h3 class="text-xl font-bold text-white mb-2" data-i18n="ann_title_2">Penerimaan Asisten Baru</h3>
                     <p class="text-gray-400 text-sm" data-i18n="ann_desc_2">Open recruitment untuk asisten laboratorium periode genap telah dibuka. Silakan cek detail di Instagram.</p>
                 </div>
-                 <div class="glass p-6 border-l-4 border-gray-700 hover:bg-white/5 transition opacity-70">
+
+                <!-- Announcement Item 3 -->
+                <div class="glass p-6 border-l-4 border-gray-700 hover:bg-white/5 transition opacity-70">
                     <span class="text-xs text-gray-500 font-mono mb-2 block">20 Jan 2026</span>
                     <h3 class="text-xl font-bold text-white mb-2" data-i18n="ann_title_3">Libur Operasional Lab</h3>
                     <p class="text-gray-400 text-sm" data-i18n="ann_desc_3">Laboratorium akan tutup sementara selama masa libur semester.</p>
@@ -585,10 +590,34 @@
                 <div>
                     <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-6" data-i18n="footer_social">Sosial Media</h4>
                     <ul class="space-y-4 text-sm text-gray-400">
-                        <li><a href="https://www.instagram.com/lab.fisikaterapan?igsh=MWM0ZnJlN3JoMXpjbQ==" target="_blank" class="flex items-center gap-3 hover:text-white transition group"><div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-gradient-to-tr group-hover:from-yellow-500 group-hover:via-red-500 group-hover:to-purple-500 transition-all duration-300">IG</div><span>Instagram</span></a></li>
-                        <li><a href="https://t.me/PraktikumFister" target="_blank" class="flex items-center gap-3 hover:text-white transition group"><div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#0088cc] transition-all duration-300">TG</div><span>Telegram Channel</span></a></li>
-                        <li><a href="https://tinyurl.com/YouTube-LFT" target="_blank" class="flex items-center gap-3 hover:text-white transition group"><div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#FF0000] transition-all duration-300">YT</div><span>YouTube</span></a></li>
-                        <li><a href="https://www.linkedin.com/company/laboratorium-fisika-terapan" target="_blank" class="flex items-center gap-3 hover:text-white transition group"><div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#0077b5] transition-all duration-300">IN</div><span>LinkedIn</span></a></li>
+                        <!-- Instagram -->
+                        <li>
+                            <a href="https://www.instagram.com/lab.fisikaterapan?igsh=MWM0ZnJlN3JoMXpjbQ==" target="_blank" class="flex items-center gap-3 hover:text-white transition group">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                <span>Instagram</span>
+                            </a>
+                        </li>
+                        <!-- Telegram -->
+                        <li>
+                            <a href="https://t.me/PraktikumFister" target="_blank" class="flex items-center gap-3 hover:text-white transition group">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.944 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                                <span>Telegram Channel</span>
+                            </a>
+                        </li>
+                        <!-- YouTube -->
+                        <li>
+                            <a href="https://tinyurl.com/YouTube-LFT" target="_blank" class="flex items-center gap-3 hover:text-white transition group">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                                <span>YouTube</span>
+                            </a>
+                        </li>
+                        <!-- LinkedIn -->
+                        <li>
+                            <a href="https://www.linkedin.com/company/laboratorium-fisika-terapan" target="_blank" class="flex items-center gap-3 hover:text-white transition group">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h5v-8.306c0-4.613 5.432-5.185 5.432 0v8.306h5v-10.5c0-5.352-5.19-5.039-8.655-1.829z"/></svg>
+                                <span>LinkedIn</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div>
@@ -636,7 +665,7 @@
                 link_tool_loan: "Formulir Peminjaman Alat →",
                 about_subtitle: "PROFIL LABORATORIUM",
                 about_title: "Tentang Kami",
-                about_desc: "Laboratorium di Perguruan Tinggi merupakan salah satu komponen yang sangat penting dalam mewujudkan fungsi dari Tridharma Perguruan Tinggi. Laboratorium Fisika Fakultas Teknik Universitas Sultan Ageng Tirtayasa (UNTIRTA) sendiri merupakan laboratorium di bawah naungan Fakultas Teknik UNTIRTA yang mewadahi segala kegiatan terkait bidang fisika guna menjalankan Tridharma Perguruan Tinggi itu sendiri.",
+                about_desc: "Laboratorium di Perguruan Tinggi merupakan salah satu komponen yang sangat penting dalam mewujudkan fungsi dari Tridharma Perguruan Tinggi. Laboratorium merupakan sarana bagi mahasiswa dan dosen untuk melakukan kegiatan pendidikan, penelitian dan layanan kepada masyarakat. Laboratorium Fisika Fakultas Teknik Universitas Sultan Ageng Tirtayasa (UNTIRTA) sendiri merupakan laboratorium di bawah naungan Fakultas Teknik UNTIRTA yang mewadahi segala kegiatan terkait bidang fisika guna menjalankan Tridharma Perguruan Tinggi itu sendiri.",
                 vision_title: "VISI",
                 vision_desc: "Menjadikan laboratorium fisika terapan sebagai sarana pengajaran dan pengembangan yang berkualitas serta berintegritas dengan menjunjung tinggi profesionalitas untuk menjadikan mahasiswa yang unggul dan kompeten, sebagai bentuk membantu mewujudkan visi dan misi fakultas teknik Untirta.",
                 mission_title: "MISI",
