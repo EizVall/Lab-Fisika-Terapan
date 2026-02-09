@@ -262,7 +262,7 @@
         </div>
     </div>
 
-    <!-- ================= HALAMAN ABOUT US ================= -->
+    <!-- ================= HALAMAN ABOUT US (UPDATED) ================= -->
     <div id="about" class="page-section">
         <div class="content-box">
             <span class="text-cyan-400 font-bold tracking-[0.2em] text-xs mb-2 block uppercase" data-i18n="about_subtitle">PROFIL LABORATORIUM</span>
@@ -275,6 +275,16 @@
                 <p class="text-base md:text-lg text-gray-300 leading-relaxed text-justify" data-i18n="about_desc">
                     Laboratorium di Perguruan Tinggi merupakan salah satu komponen yang sangat penting dalam mewujudkan fungsi dari Tridharma Perguruan Tinggi. Laboratorium merupakan sarana bagi mahasiswa dan dosen untuk melakukan kegiatan pendidikan, penelitian dan layanan kepada masyarakat. Laboratorium Fisika Fakultas Teknik Universitas Sultan Ageng Tirtayasa (UNTIRTA) sendiri merupakan laboratorium di bawah naungan Fakultas Teknik UNTIRTA yang mewadahi segala kegiatan terkait bidang fisika guna menjalankan Tridharma Perguruan Tinggi itu sendiri.
                 </p>
+                
+                <!-- Foto Kepengurusan Besar -->
+                <div class="mt-12 relative group rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60 z-10"></div>
+                    <img src="Foto%20Kepengurusan.jpeg" alt="Foto Kepengurusan Lab Fisika Terapan" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out" onerror="this.style.display='none'">
+                    <div class="absolute bottom-0 left-0 p-6 md:p-8 z-20">
+                        <h3 class="text-xl md:text-3xl font-bold text-white mb-2">Tim Laboratorium 2025/2026</h3>
+                        <p class="text-sm md:text-base text-gray-300">Berdedikasi untuk kemajuan riset dan pendidikan fisika terapan.</p>
+                    </div>
+                </div>
             </div>
 
             <div class="grid grid-cols-1 gap-8">
@@ -306,7 +316,7 @@
         </div>
     </div>
 
-    <!-- ================= HALAMAN ACTIVITIES (BARU) ================= -->
+    <!-- ================= HALAMAN ACTIVITIES (UPDATED) ================= -->
     <div id="activities" class="page-section">
         <div class="content-box">
             <span class="text-cyan-400 font-bold tracking-[0.2em] text-xs mb-2 block uppercase" data-i18n="activities_subtitle">DOKUMENTASI</span>
@@ -315,44 +325,51 @@
             </h1>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Placeholder Card 1 -->
-                <div class="glass p-0 overflow-hidden group">
-                    <div class="h-48 bg-gray-800 relative">
-                        <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-bold">
+                <!-- Studi Banding -->
+                <div class="glass p-0 overflow-hidden group rounded-xl">
+                    <div class="h-56 bg-gray-800 relative overflow-hidden">
+                        <!-- Image Fallback to Placeholder if not found -->
+                        <img src="Studi%20Banding.jpeg" alt="Studi Banding" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-bold bg-gray-900" style="display: none;">
                             <span data-i18n="img_placeholder">Image Here</span>
                         </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2 group-hover:text-cyan-400 transition" data-i18n="act_title_1">Praktikum Fisika Dasar</h3>
-                        <p class="text-sm text-gray-400 mb-4" data-i18n="act_desc_1">Kegiatan praktikum rutin mahasiswa semester ganjil.</p>
+                        <h3 class="font-bold text-xl mb-2 group-hover:text-cyan-400 transition" data-i18n="act_title_1">Studi Banding Institusi</h3>
+                        <p class="text-sm text-gray-400 mb-4" data-i18n="act_desc_1">Pertukaran wawasan manajerial dan operasional dengan laboratorium universitas lain untuk peningkatan mutu.</p>
                         <span class="text-[10px] bg-white/10 px-2 py-1 rounded text-cyan-300">2025</span>
                     </div>
                 </div>
 
-                <!-- Placeholder Card 2 -->
-                <div class="glass p-0 overflow-hidden group">
-                    <div class="h-48 bg-gray-800 relative">
-                        <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-bold">
+                <!-- Sosialisasi Praktikum -->
+                <div class="glass p-0 overflow-hidden group rounded-xl">
+                    <div class="h-56 bg-gray-800 relative overflow-hidden">
+                        <img src="Sosialisasi%20Praktikum.jpeg" alt="Sosialisasi Praktikum" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-bold bg-gray-900" style="display: none;">
                             <span data-i18n="img_placeholder">Image Here</span>
                         </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2 group-hover:text-cyan-400 transition" data-i18n="act_title_2">Pelatihan Asisten</h3>
-                        <p class="text-sm text-gray-400 mb-4" data-i18n="act_desc_2">Peningkatan kompetensi dan integritas asisten laboratorium.</p>
+                        <h3 class="font-bold text-xl mb-2 group-hover:text-cyan-400 transition" data-i18n="act_title_2">Sosialisasi & Orientasi</h3>
+                        <p class="text-sm text-gray-400 mb-4" data-i18n="act_desc_2">Pemaparan alur, tata tertib, dan prosedur keselamatan kerja (K3) praktikum kepada praktikan.</p>
                         <span class="text-[10px] bg-white/10 px-2 py-1 rounded text-cyan-300">2025</span>
                     </div>
                 </div>
 
-                <!-- Placeholder Card 3 -->
-                <div class="glass p-0 overflow-hidden group">
-                    <div class="h-48 bg-gray-800 relative">
-                        <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-bold">
+                <!-- Asistensi Praktikum -->
+                <div class="glass p-0 overflow-hidden group rounded-xl">
+                    <div class="h-56 bg-gray-800 relative overflow-hidden">
+                        <img src="Asistensi.jpeg" alt="Asistensi Praktikum" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-bold bg-gray-900" style="display: none;">
                             <span data-i18n="img_placeholder">Image Here</span>
                         </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2 group-hover:text-cyan-400 transition" data-i18n="act_title_3">Kunjungan Industri</h3>
-                        <p class="text-sm text-gray-400 mb-4" data-i18n="act_desc_3">Studi banding ke industri terkait fisika terapan.</p>
+                        <h3 class="font-bold text-xl mb-2 group-hover:text-cyan-400 transition" data-i18n="act_title_3">Asistensi & Mentoring</h3>
+                        <p class="text-sm text-gray-400 mb-4" data-i18n="act_desc_3">Pendampingan intensif materi dan teknis percobaan untuk menunjang pemahaman mahasiswa.</p>
                         <span class="text-[10px] bg-white/10 px-2 py-1 rounded text-cyan-300">2026</span>
                     </div>
                 </div>
@@ -366,7 +383,7 @@
         </div>
     </div>
 
-    <!-- ================= HALAMAN ANNOUNCEMENTS (BARU) ================= -->
+    <!-- ================= HALAMAN ANNOUNCEMENTS ================= -->
     <div id="announcements" class="page-section">
         <div class="content-box">
             <span class="text-cyan-400 font-bold tracking-[0.2em] text-xs mb-2 block uppercase" data-i18n="announcements_subtitle">INFORMASI TERBARU</span>
@@ -679,12 +696,12 @@
                 `,
                 activities_subtitle: "DOKUMENTASI",
                 activities_title: "Galeri Kegiatan",
-                act_title_1: "Praktikum Fisika Dasar",
-                act_desc_1: "Kegiatan praktikum rutin mahasiswa semester ganjil.",
-                act_title_2: "Pelatihan Asisten",
-                act_desc_2: "Peningkatan kompetensi dan integritas asisten laboratorium.",
-                act_title_3: "Kunjungan Industri",
-                act_desc_3: "Studi banding ke industri terkait fisika terapan.",
+                act_title_1: "Studi Banding Institusi",
+                act_desc_1: "Pertukaran wawasan manajerial dan operasional dengan laboratorium universitas lain untuk peningkatan mutu.",
+                act_title_2: "Sosialisasi & Orientasi",
+                act_desc_2: "Pemaparan alur, tata tertib, dan prosedur keselamatan kerja (K3) praktikum kepada praktikan.",
+                act_title_3: "Asistensi & Mentoring",
+                act_desc_3: "Pendampingan intensif materi dan teknis percobaan untuk menunjang pemahaman mahasiswa.",
                 img_placeholder: "Foto Kegiatan",
                 announcements_subtitle: "INFORMASI TERBARU",
                 announcements_title: "Papan Pengumuman",
@@ -756,12 +773,12 @@
                 `,
                 activities_subtitle: "DOCUMENTATION",
                 activities_title: "Activity Gallery",
-                act_title_1: "Basic Physics Practicum",
-                act_desc_1: "Routine practicum activities for odd semester students.",
-                act_title_2: "Assistant Training",
-                act_desc_2: "Competency and integrity improvement for lab assistants.",
-                act_title_3: "Industrial Visit",
-                act_desc_3: "Comparative study to applied physics related industries.",
+                act_title_1: "Institutional Benchmarking",
+                act_desc_1: "Managerial and operational insight exchange with other university labs for quality improvement.",
+                act_title_2: "Socialization & Orientation",
+                act_desc_2: "Explanation of flows, regulations, and safety procedures (OHS) to practicum students.",
+                act_title_3: "Assistance & Mentoring",
+                act_desc_3: "Intensive material and technical experiment assistance to support student understanding.",
                 img_placeholder: "Activity Photo",
                 announcements_subtitle: "LATEST UPDATES",
                 announcements_title: "Announcement Board",
@@ -833,12 +850,12 @@
                 `,
                 activities_subtitle: "ドキュメンテーション",
                 activities_title: "活動ギャラリー",
-                act_title_1: "基礎物理学実習",
-                act_desc_1: "奇数学期の学生向けの定期的な実習活動。",
-                act_title_2: "アシスタントトレーニング",
-                act_desc_2: "ラボアシスタントの能力と誠実さの向上。",
-                act_title_3: "産業訪問",
-                act_desc_3: "応用物理学関連産業への比較研究。",
+                act_title_1: "施設比較研究 (ベンチマーク)",
+                act_desc_1: "品質向上のための他大学の研究室との管理的および運営的洞察の交換。",
+                act_title_2: "実習オリエンテーション",
+                act_desc_2: "実習生への流れ、規則、および安全手順（OHS）の説明。",
+                act_title_3: "実習指導・メンタリング",
+                act_desc_3: "学生の理解を支援するための集中的な教材および実験技術の指導。",
                 img_placeholder: "活動写真",
                 announcements_subtitle: "最新情報",
                 announcements_title: "掲示板",
