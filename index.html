@@ -49,10 +49,10 @@
             animation: fadeIn 0.5s ease-out;
         }
 
-        /* Khusus untuk About Us agar Full Screen */
+        /* Override padding for specific sections if needed */
         #about.page-section {
-            padding: 0 !important;
-            max-width: 100% !important;
+            padding-left: 0;
+            padding-right: 0;
         }
 
         @media (min-width: 768px) {
@@ -62,9 +62,9 @@
                 padding-left: 10%;
                 padding-right: 10%;
             }
-            /* Reset padding for About Us on desktop too */
             #about.page-section {
-                padding: 0 !important;
+                padding-left: 0;
+                padding-right: 0;
             }
         }
         
@@ -192,7 +192,7 @@
     </nav>
 
     <!-- ================= HALAMAN HOME ================= -->
-    <div id="home" class="page-section active-section">
+    <div id="home" class="page-section active-section" style="padding-left: 5%; padding-right: 5%;">
         <!-- Hero Section -->
         <div class="content-box flex flex-col justify-center min-h-[50vh] md:min-h-[60vh]">
             <span class="text-cyan-400 font-bold tracking-[0.3em] text-xs mb-4 block" data-i18n="hero_subtitle">LABORATORIUM PENDIDIKAN</span>
@@ -275,68 +275,93 @@
     <!-- ================= HALAMAN ABOUT US (UPDATED) ================= -->
     <div id="about" class="page-section">
         
-        <!-- HERO BANNER FULL WIDTH (RESPONSIVE) -->
-        <div class="relative w-full flex flex-col justify-start">
+        <!-- CONTAINER UTAMA -->
+        <div class="content-box pt-24 md:pt-32 pb-20 px-5 md:px-10">
             
-            <!-- Foto Kepengurusan Full Width & Proportional Height -->
-            <div class="w-full relative">
-                <!-- Gunakan w-full dan h-auto agar gambar menyesuaikan lebar layar dan tinggi otomatis (tidak terpotong) -->
-                <img src="Foto%20Kepengurusan.jpeg" alt="Foto Kepengurusan Lab" class="w-full h-auto object-contain block" onerror="this.style.display='none'">
+            <!-- JUDUL -->
+            <div class="mb-8">
+                <span class="text-cyan-400 font-bold tracking-[0.2em] text-xs md:text-sm mb-2 block uppercase" data-i18n="about_subtitle">PROFIL LABORATORIUM</span>
+                <h1 class="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-tight text-white" data-i18n="about_title">
+                    Tentang Kami
+                </h1>
+            </div>
+
+            <!-- FOTO KEPENGURUSAN (FULL WIDTH & JELAS) -->
+            <div class="w-full mb-12 rounded-2xl overflow-hidden shadow-2xl border border-white/10 relative group">
+                <!-- Gambar ditampilkan apa adanya (contain/cover logic handled by natural height) -->
+                <!-- w-full h-auto memastikan gambar selebar container dan tinggi proporsional, tidak terpotong -->
+                <img src="Foto%20Kepengurusan.jpeg" alt="Foto Kepengurusan Lab Fisika Terapan" class="w-full h-auto object-cover block" onerror="this.style.display='none'">
                 
-                <!-- Gradient Overlay di bagian bawah foto agar transisi ke teks lebih halus -->
-                <div class="absolute inset-x-0 bottom-0 h-32 md:h-1/2 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
+                <!-- Overlay tipis untuk estetika saat hover -->
+                <div class="absolute inset-0 bg-gradient-to-t from-[#020205] via-transparent to-transparent opacity-60"></div>
                 
-                <!-- Teks overlay di atas foto bagian bawah -->
-                <div class="absolute bottom-0 left-0 w-full p-4 md:p-10 z-10">
-                    <div class="max-w-7xl mx-auto">
-                        <span class="text-cyan-400 font-bold tracking-[0.2em] md:tracking-[0.3em] text-[10px] md:text-sm mb-1 md:mb-2 block uppercase shadow-black drop-shadow-md" data-i18n="about_subtitle">PROFIL LABORATORIUM</span>
-                        <h1 class="text-2xl md:text-6xl font-black tracking-tighter uppercase leading-tight text-white drop-shadow-lg" data-i18n="about_title">
-                            Tentang Kami
-                        </h1>
-                    </div>
+                <div class="absolute bottom-4 left-4 md:bottom-8 md:left-8">
+                    <p class="text-white/80 text-xs md:text-sm font-mono tracking-widest">TIM LABORATORIUM 2025/2026</p>
                 </div>
             </div>
 
-            <!-- Konten Teks di bawah foto -->
-            <div class="content-box py-10 px-5 md:px-0">
-                <div class="max-w-4xl mx-auto">
-                    <p class="text-base md:text-xl text-gray-200 leading-relaxed text-justify mb-12 border-l-4 border-cyan-500 pl-6" data-i18n="about_desc">
-                        Laboratorium di Perguruan Tinggi merupakan salah satu komponen yang sangat penting dalam mewujudkan fungsi dari Tridharma Perguruan Tinggi. Laboratorium Fisika Fakultas Teknik Universitas Sultan Ageng Tirtayasa (UNTIRTA) sendiri merupakan laboratorium di bawah naungan Fakultas Teknik UNTIRTA yang mewadahi segala kegiatan terkait bidang fisika guna menjalankan Tridharma Perguruan Tinggi itu sendiri.
+            <!-- PENJELASAN (TEXT RAPIH) -->
+            <div class="glass p-8 md:p-12 mb-12 bg-[#0a1931]/80 backdrop-blur-xl border-l-4 border-cyan-500">
+                <!-- Text-left digunakan agar spasi tidak renggang (river effect) -->
+                <p class="text-base md:text-lg text-gray-200 leading-relaxed text-left" data-i18n="about_desc">
+                    Laboratorium di Perguruan Tinggi merupakan salah satu komponen yang sangat penting dalam mewujudkan fungsi dari Tridharma Perguruan Tinggi. Laboratorium merupakan sarana bagi mahasiswa dan dosen untuk melakukan kegiatan pendidikan, penelitian dan layanan kepada masyarakat. Laboratorium Fisika Fakultas Teknik Universitas Sultan Ageng Tirtayasa (UNTIRTA) sendiri merupakan laboratorium di bawah naungan Fakultas Teknik UNTIRTA yang mewadahi segala kegiatan terkait bidang fisika guna menjalankan Tridharma Perguruan Tinggi itu sendiri.
+                </p>
+            </div>
+
+            <!-- VISI & MISI GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Visi -->
+                <div class="glass p-8 md:p-12 border-t-4 border-cyan-500 bg-[#0a1931]/60">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 bg-cyan-500/20 rounded-full text-cyan-400">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white" data-i18n="vision_title">VISI</h3>
+                    </div>
+                    <p class="text-base text-gray-300 leading-relaxed text-left" data-i18n="vision_desc">
+                        Menjadikan laboratorium fisika terapan sebagai sarana pengajaran dan pengembangan yang berkualitas serta berintegritas dengan menjunjung tinggi profesionalitas untuk menjadikan mahasiswa yang unggul dan kompeten, sebagai bentuk membantu mewujudkan visi dan misi fakultas teknik Untirta.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mt-12">
-                    <!-- Visi -->
-                    <div class="glass p-8 md:p-12 border-l-4 border-cyan-500">
-                        <h3 class="text-2xl md:text-3xl font-bold mb-6 text-white" data-i18n="vision_title">VISI</h3>
-                        <p class="text-base md:text-lg text-gray-300 leading-relaxed text-justify" data-i18n="vision_desc">
-                            Menjadikan laboratorium fisika terapan sebagai sarana pengajaran dan pengembangan yang berkualitas serta berintegritas dengan menjunjung tinggi profesionalitas untuk menjadikan mahasiswa yang unggul dan kompeten, sebagai bentuk membantu mewujudkan visi dan misi fakultas teknik Untirta.
-                        </p>
+                <!-- Misi -->
+                <div class="glass p-8 md:p-12 border-t-4 border-white bg-[#0a1931]/60">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 bg-white/10 rounded-full text-white">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white" data-i18n="mission_title">MISI</h3>
                     </div>
-
-                    <!-- Misi -->
-                    <div class="glass p-8 md:p-12 border-l-4 border-white">
-                        <h3 class="text-2xl md:text-3xl font-bold mb-6 text-white" data-i18n="mission_title">MISI</h3>
-                        <ul class="list-disc list-outside ml-5 text-base md:text-lg text-gray-300 space-y-4 text-justify" data-i18n="mission_list">
-                            <li>Mendorong budaya kolaboratif dengan meningkatkan inisiatif dan kepedulian antar asisten demi tercapainya kinerja tim yang saling mendukung.</li>
-                            <li>Menjadi fasilitator yang TOP (tanggungjawab, objektif, dan profesional) dalam berjalannya kegiatan praktikum.</li>
-                            <li>Menjalin kerja sama dan komunikasi yang baik secara internal maupun eksternal.</li>
-                            <li>Mendukung kegiatan riset atau penelitian melalui penyediaan fasilitas dan sarana laboratorium yang memadai.</li>
-                        </ul>
-                    </div>
+                    <ul class="space-y-4 text-base text-gray-300 text-left list-none" data-i18n="mission_list">
+                        <li class="flex gap-3">
+                            <span class="text-cyan-500 font-bold mt-1">•</span>
+                            <span>Mendorong budaya kolaboratif dengan meningkatkan inisiatif dan kepedulian antar asisten demi tercapainya kinerja tim yang saling mendukung.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-cyan-500 font-bold mt-1">•</span>
+                            <span>Menjadi fasilitator yang TOP (tanggungjawab, objektif, dan profesional) dalam berjalannya kegiatan praktikum.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-cyan-500 font-bold mt-1">•</span>
+                            <span>Menjalin kerja sama dan komunikasi yang baik secara internal maupun eksternal.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-cyan-500 font-bold mt-1">•</span>
+                            <span>Mendukung kegiatan riset atau penelitian melalui penyediaan fasilitas dan sarana laboratorium yang memadai.</span>
+                        </li>
+                    </ul>
                 </div>
-                
-                <div class="mt-20 text-center">
-                     <button onclick="switchPage('home')" class="px-8 py-3 border border-white/30 rounded-full text-sm font-bold hover:bg-white hover:text-black transition" data-i18n="btn_back_home">
-                        ← Kembali ke Beranda
-                    </button>
-                </div>
+            </div>
+            
+            <div class="mt-20 text-center">
+                 <button onclick="switchPage('home')" class="px-8 py-3 border border-white/30 rounded-full text-sm font-bold hover:bg-white hover:text-black transition" data-i18n="btn_back_home">
+                    ← Kembali ke Beranda
+                </button>
             </div>
         </div>
     </div>
 
     <!-- ================= HALAMAN ACTIVITIES (UPDATED) ================= -->
-    <div id="activities" class="page-section">
+    <div id="activities" class="page-section" style="padding-left: 5%; padding-right: 5%;">
         <div class="content-box">
             <span class="text-cyan-400 font-bold tracking-[0.2em] text-xs mb-2 block uppercase" data-i18n="activities_subtitle">DOKUMENTASI</span>
             <h1 class="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-tight mb-8" data-i18n="activities_title">
@@ -403,7 +428,7 @@
     </div>
 
     <!-- ================= HALAMAN ANNOUNCEMENTS ================= -->
-    <div id="announcements" class="page-section">
+    <div id="announcements" class="page-section" style="padding-left: 5%; padding-right: 5%;">
         <div class="content-box">
             <span class="text-cyan-400 font-bold tracking-[0.2em] text-xs mb-2 block uppercase" data-i18n="announcements_subtitle">INFORMASI TERBARU</span>
             <h1 class="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-tight mb-8" data-i18n="announcements_title">
@@ -442,7 +467,7 @@
     </div>
 
     <!-- ================= HALAMAN LAB STRUCTURE ================= -->
-    <div id="struktur" class="page-section">
+    <div id="struktur" class="page-section" style="padding-left: 5%; padding-right: 5%;">
         <div class="content-box">
             <span class="text-cyan-400 font-bold tracking-[0.2em] text-xs mb-2 block uppercase" data-i18n="struct_subtitle">ORGANISASI</span>
             <h1 class="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-tight mb-12" data-i18n="struct_title">
@@ -580,7 +605,7 @@
     </div>
 
     <!-- ================= HALAMAN CONTACT ASSISTANT ================= -->
-    <div id="asisten" class="page-section">
+    <div id="asisten" class="page-section" style="padding-left: 5%; padding-right: 5%;">
         <div class="content-box text-center mb-12">
             <span class="text-cyan-400 font-bold tracking-[0.2em] text-xs mb-2 block uppercase" data-i18n="assistant_subtitle">Direktori Personil</span>
             <h1 class="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-tight" data-i18n="assistant_title">
@@ -703,33 +728,16 @@
                 link_tool_loan: "Formulir Peminjaman Alat →",
                 about_subtitle: "PROFIL LABORATORIUM",
                 about_title: "Tentang Kami",
-                about_desc: "Laboratorium di Perguruan Tinggi merupakan salah satu komponen yang sangat penting dalam mewujudkan fungsi dari Tridharma Perguruan Tinggi. Laboratorium Fisika Fakultas Teknik Universitas Sultan Ageng Tirtayasa (UNTIRTA) sendiri merupakan laboratorium di bawah naungan Fakultas Teknik UNTIRTA yang mewadahi segala kegiatan terkait bidang fisika guna menjalankan Tridharma Perguruan Tinggi itu sendiri.",
+                about_desc: "Laboratorium di Perguruan Tinggi merupakan salah satu komponen yang sangat penting dalam mewujudkan fungsi dari Tridharma Perguruan Tinggi. Laboratorium merupakan sarana bagi mahasiswa dan dosen untuk melakukan kegiatan pendidikan, penelitian dan layanan kepada masyarakat. Laboratorium Fisika Fakultas Teknik Universitas Sultan Ageng Tirtayasa (UNTIRTA) sendiri merupakan laboratorium di bawah naungan Fakultas Teknik UNTIRTA yang mewadahi segala kegiatan terkait bidang fisika guna menjalankan Tridharma Perguruan Tinggi itu sendiri.",
                 vision_title: "VISI",
                 vision_desc: "Menjadikan laboratorium fisika terapan sebagai sarana pengajaran dan pengembangan yang berkualitas serta berintegritas dengan menjunjung tinggi profesionalitas untuk menjadikan mahasiswa yang unggul dan kompeten, sebagai bentuk membantu mewujudkan visi dan misi fakultas teknik Untirta.",
                 mission_title: "MISI",
                 mission_list: `
-                    <li>Mendorong budaya kolaboratif dengan meningkatkan inisiatif dan kepedulian antar asisten demi tercapainya kinerja tim yang saling mendukung.</li>
-                    <li>Menjadi fasilitator yang TOP (tanggungjawab, objektif, dan profesional) dalam berjalannya kegiatan praktikum.</li>
-                    <li>Menjalin kerja sama dan komunikasi yang baik secara internal maupun eksternal.</li>
-                    <li>Mendukung kegiatan riset atau penelitian melalui penyediaan fasilitas dan sarana laboratorium yang memadai.</li>
+                    <li class="flex gap-3"><span class="text-cyan-500 font-bold mt-1">•</span><span>Mendorong budaya kolaboratif dengan meningkatkan inisiatif dan kepedulian antar asisten demi tercapainya kinerja tim yang saling mendukung.</span></li>
+                    <li class="flex gap-3"><span class="text-cyan-500 font-bold mt-1">•</span><span>Menjadi fasilitator yang TOP (tanggungjawab, objektif, dan profesional) dalam berjalannya kegiatan praktikum.</span></li>
+                    <li class="flex gap-3"><span class="text-cyan-500 font-bold mt-1">•</span><span>Menjalin kerja sama dan komunikasi yang baik secara internal maupun eksternal.</span></li>
+                    <li class="flex gap-3"><span class="text-cyan-500 font-bold mt-1">•</span><span>Mendukung kegiatan riset atau penelitian melalui penyediaan fasilitas dan sarana laboratorium yang memadai.</span></li>
                 `,
-                activities_subtitle: "DOKUMENTASI",
-                activities_title: "Galeri Kegiatan",
-                act_title_1: "Studi Banding Institusi",
-                act_desc_1: "Pertukaran wawasan manajerial dan operasional dengan laboratorium universitas lain untuk peningkatan mutu.",
-                act_title_2: "Sosialisasi & Orientasi",
-                act_desc_2: "Pemaparan alur, tata tertib, dan prosedur keselamatan kerja (K3) praktikum kepada praktikan.",
-                act_title_3: "Asistensi & Mentoring",
-                act_desc_3: "Pendampingan intensif materi dan teknis percobaan untuk menunjang pemahaman mahasiswa.",
-                img_placeholder: "Foto Kegiatan",
-                announcements_subtitle: "INFORMASI TERBARU",
-                announcements_title: "Papan Pengumuman",
-                ann_title_1: "Jadwal Responsi Modul 1",
-                ann_desc_1: "Responsi untuk modul pertama akan dilaksanakan minggu depan. Harap persiapkan diri.",
-                ann_title_2: "Penerimaan Asisten Baru",
-                ann_desc_2: "Open recruitment untuk asisten laboratorium periode genap telah dibuka. Silakan cek detail di Instagram.",
-                ann_title_3: "Libur Operasional Lab",
-                ann_desc_3: "Laboratorium akan tutup sementara selama masa libur semester.",
                 btn_back_home: "← Kembali ke Beranda",
                 struct_subtitle: "ORGANISASI",
                 struct_title: "Struktur Organisasi <br>Laboratorium",
@@ -785,10 +793,10 @@
                 vision_desc: "To make the applied physics laboratory a quality and integrated teaching and development facility by upholding high professionalism to create superior and competent students, as a form of helping to realize the vision and mission of the Untirta Faculty of Engineering.",
                 mission_title: "MISSION",
                 mission_list: `
-                    <li>Encouraging a collaborative culture by increasing initiative and care among assistants to achieve mutually supporting team performance.</li>
-                    <li>Becoming a TOP facilitator (responsible, objective, and professional) in the running of practicum activities.</li>
-                    <li>Establishing good cooperation and communication both internally and externally.</li>
-                    <li>Supporting research activities through the provision of adequate laboratory facilities and infrastructure.</li>
+                    <li class="flex gap-3"><span class="text-cyan-500 font-bold mt-1">•</span><span>Encouraging a collaborative culture by increasing initiative and care among assistants to achieve mutually supporting team performance.</span></li>
+                    <li class="flex gap-3"><span class="text-cyan-500 font-bold mt-1">•</span><span>Becoming a TOP facilitator (responsible, objective, and professional) in the running of practicum activities.</span></li>
+                    <li class="flex gap-3"><span class="text-cyan-500 font-bold mt-1">•</span><span>Establishing good cooperation and communication both internally and externally.</span></li>
+                    <li class="flex gap-3"><span class="text-cyan-500 font-bold mt-1">•</span><span>Supporting research activities through the provision of adequate laboratory facilities and infrastructure.</span></li>
                 `,
                 activities_subtitle: "DOCUMENTATION",
                 activities_title: "Activity Gallery",
@@ -862,10 +870,10 @@
                 vision_desc: "応用物理学実験室を、高い専門性を維持し、優秀で有能な学生を育成するための質が高く誠実な教育・開発の場とし、Untirta工学部のビジョンとミッションの実現を支援する。",
                 mission_title: "ミッション",
                 mission_list: `
-                    <li>相互に支え合うチームパフォーマンスを達成するために、アシスタント間の主導権と思いやりを高め、協力的な文化を奨励する。</li>
-                    <li>実習活動の運営において、TOP（責任感、客観性、専門性）なファシリテーターとなる。</li>
-                    <li>内部および外部との良好な協力関係とコミュニケーションを確立する。</li>
-                    <li>適切な実験室の設備とインフラの提供を通じて、研究活動を支援する。</li>
+                    <li class="flex gap-3"><span class="text-cyan-500 font-bold mt-1">•</span><span>相互に支え合うチームパフォーマンスを達成するために、アシスタント間の主導権と思いやりを高め、協力的な文化を奨励する。</span></li>
+                    <li class="flex gap-3"><span class="text-cyan-500 font-bold mt-1">•</span><span>実習活動の運営において、TOP（責任感、客観性、専門性）なファシリテーターとなる。</span></li>
+                    <li class="flex gap-3"><span class="text-cyan-500 font-bold mt-1">•</span><span>内部および外部との良好な協力関係とコミュニケーションを確立する。</span></li>
+                    <li class="flex gap-3"><span class="text-cyan-500 font-bold mt-1">•</span><span>適切な実験室の設備とインフラの提供を通じて、研究活動を支援する。</span></li>
                 `,
                 activities_subtitle: "ドキュメンテーション",
                 activities_title: "活動ギャラリー",
