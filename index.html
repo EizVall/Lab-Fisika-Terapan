@@ -275,22 +275,22 @@
     <!-- ================= HALAMAN ABOUT US (UPDATED) ================= -->
     <div id="about" class="page-section">
         
-        <!-- HERO BANNER FULL WIDTH (NO CROP) -->
-        <div class="relative w-full min-h-[50vh] flex flex-col justify-start">
+        <!-- HERO BANNER FULL WIDTH (RESPONSIVE) -->
+        <div class="relative w-full flex flex-col justify-start">
             
             <!-- Foto Kepengurusan Full Width & Proportional Height -->
             <div class="w-full relative">
                 <!-- Gunakan w-full dan h-auto agar gambar menyesuaikan lebar layar dan tinggi otomatis (tidak terpotong) -->
-                <img src="Foto%20Kepengurusan.jpeg" alt="Foto Kepengurusan Lab" class="w-full h-auto object-contain" onerror="this.style.display='none'">
+                <img src="Foto%20Kepengurusan.jpeg" alt="Foto Kepengurusan Lab" class="w-full h-auto object-contain block" onerror="this.style.display='none'">
                 
                 <!-- Gradient Overlay di bagian bawah foto agar transisi ke teks lebih halus -->
-                <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                <div class="absolute inset-x-0 bottom-0 h-32 md:h-1/2 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
                 
                 <!-- Teks overlay di atas foto bagian bawah -->
-                <div class="absolute bottom-0 left-0 w-full p-6 md:p-10 z-10">
+                <div class="absolute bottom-0 left-0 w-full p-4 md:p-10 z-10">
                     <div class="max-w-7xl mx-auto">
-                        <span class="text-cyan-400 font-bold tracking-[0.3em] text-xs md:text-sm mb-2 block uppercase shadow-black drop-shadow-md" data-i18n="about_subtitle">PROFIL LABORATORIUM</span>
-                        <h1 class="text-3xl md:text-6xl font-black tracking-tighter uppercase leading-tight text-white drop-shadow-lg" data-i18n="about_title">
+                        <span class="text-cyan-400 font-bold tracking-[0.2em] md:tracking-[0.3em] text-[10px] md:text-sm mb-1 md:mb-2 block uppercase shadow-black drop-shadow-md" data-i18n="about_subtitle">PROFIL LABORATORIUM</span>
+                        <h1 class="text-2xl md:text-6xl font-black tracking-tighter uppercase leading-tight text-white drop-shadow-lg" data-i18n="about_title">
                             Tentang Kami
                         </h1>
                     </div>
@@ -347,7 +347,6 @@
                 <!-- Studi Banding -->
                 <div class="glass p-0 overflow-hidden group rounded-xl">
                     <div class="h-56 bg-gray-800 relative overflow-hidden">
-                        <!-- Menggunakan nama file persis dari screenshot -->
                         <img src="Studi%20Banding.jpeg" alt="Studi Banding" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                         <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-bold bg-gray-900" style="display: none;">
                             <span data-i18n="img_placeholder">Image Here</span>
@@ -356,7 +355,8 @@
                     </div>
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 group-hover:text-cyan-400 transition" data-i18n="act_title_1">Studi Banding Institusi</h3>
-                        <p class="text-sm text-gray-400 mb-4" data-i18n="act_desc_1">Pertukaran wawasan manajerial dan operasional dengan laboratorium universitas lain untuk peningkatan mutu.</p>
+                        <!-- Menggunakan text-left untuk kerapihan spasi -->
+                        <p class="text-sm text-gray-400 mb-4 text-left leading-relaxed" data-i18n="act_desc_1">Pertukaran wawasan manajerial dan operasional dengan laboratorium universitas lain untuk peningkatan mutu.</p>
                         <span class="text-[10px] bg-white/10 px-2 py-1 rounded text-cyan-300">2026</span>
                     </div>
                 </div>
@@ -364,7 +364,6 @@
                 <!-- Sosialisasi Praktikum -->
                 <div class="glass p-0 overflow-hidden group rounded-xl">
                     <div class="h-56 bg-gray-800 relative overflow-hidden">
-                        <!-- Menggunakan nama file persis dari screenshot -->
                         <img src="Sosialisasi%20Praktikum.jpeg" alt="Sosialisasi Praktikum" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                         <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-bold bg-gray-900" style="display: none;">
                             <span data-i18n="img_placeholder">Image Here</span>
@@ -373,7 +372,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 group-hover:text-cyan-400 transition" data-i18n="act_title_2">Sosialisasi & Orientasi</h3>
-                        <p class="text-sm text-gray-400 mb-4" data-i18n="act_desc_2">Pemaparan alur, tata tertib, dan prosedur keselamatan kerja (K3) praktikum kepada praktikan.</p>
+                        <p class="text-sm text-gray-400 mb-4 text-left leading-relaxed" data-i18n="act_desc_2">Pemaparan alur, tata tertib, dan prosedur keselamatan kerja (K3) praktikum kepada praktikan.</p>
                         <span class="text-[10px] bg-white/10 px-2 py-1 rounded text-cyan-300">2026</span>
                     </div>
                 </div>
@@ -381,7 +380,6 @@
                 <!-- Asistensi Praktikum -->
                 <div class="glass p-0 overflow-hidden group rounded-xl">
                     <div class="h-56 bg-gray-800 relative overflow-hidden">
-                        <!-- Menggunakan nama file persis dari screenshot -->
                         <img src="Asistensi.jpeg" alt="Asistensi Praktikum" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                         <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-bold bg-gray-900" style="display: none;">
                             <span data-i18n="img_placeholder">Image Here</span>
@@ -390,7 +388,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 group-hover:text-cyan-400 transition" data-i18n="act_title_3">Asistensi & Mentoring</h3>
-                        <p class="text-sm text-gray-400 mb-4" data-i18n="act_desc_3">Pendampingan intensif materi dan teknis percobaan untuk menunjang pemahaman mahasiswa.</p>
+                        <p class="text-sm text-gray-400 mb-4 text-left leading-relaxed" data-i18n="act_desc_3">Pendampingan intensif materi dan teknis percobaan untuk menunjang pemahaman mahasiswa.</p>
                         <span class="text-[10px] bg-white/10 px-2 py-1 rounded text-cyan-300">2026</span>
                     </div>
                 </div>
