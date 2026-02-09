@@ -49,12 +49,22 @@
             animation: fadeIn 0.5s ease-out;
         }
 
+        /* Khusus untuk About Us agar Full Screen */
+        #about.page-section {
+            padding: 0 !important;
+            max-width: 100% !important;
+        }
+
         @media (min-width: 768px) {
             .page-section {
                 padding-top: 140px;
                 padding-bottom: 100px;
                 padding-left: 10%;
                 padding-right: 10%;
+            }
+            /* Reset padding for About Us on desktop too */
+            #about.page-section {
+                padding: 0 !important;
             }
         }
         
@@ -264,42 +274,45 @@
 
     <!-- ================= HALAMAN ABOUT US (UPDATED) ================= -->
     <div id="about" class="page-section">
-        <div class="content-box">
-            <span class="text-cyan-400 font-bold tracking-[0.2em] text-xs mb-2 block uppercase" data-i18n="about_subtitle">PROFIL LABORATORIUM</span>
-            <h1 class="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-tight mb-8" data-i18n="about_title">
-                Tentang Kami
-            </h1>
-
-            <!-- Penjelasan Tentang Kami -->
-            <div class="glass p-6 md:p-12 mb-10">
-                <p class="text-base md:text-lg text-gray-300 leading-relaxed text-justify" data-i18n="about_desc">
-                    Laboratorium di Perguruan Tinggi merupakan salah satu komponen yang sangat penting dalam mewujudkan fungsi dari Tridharma Perguruan Tinggi. Laboratorium merupakan sarana bagi mahasiswa dan dosen untuk melakukan kegiatan pendidikan, penelitian dan layanan kepada masyarakat. Laboratorium Fisika Fakultas Teknik Universitas Sultan Ageng Tirtayasa (UNTIRTA) sendiri merupakan laboratorium di bawah naungan Fakultas Teknik UNTIRTA yang mewadahi segala kegiatan terkait bidang fisika guna menjalankan Tridharma Perguruan Tinggi itu sendiri.
-                </p>
-                
-                <!-- Foto Kepengurusan Besar -->
-                <div class="mt-12 relative group rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60 z-10"></div>
-                    <img src="Foto%20Kepengurusan.jpeg" alt="Foto Kepengurusan Lab Fisika Terapan" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out" onerror="this.style.display='none'">
-                    <div class="absolute bottom-0 left-0 p-6 md:p-8 z-20">
-                        <h3 class="text-xl md:text-3xl font-bold text-white mb-2">Tim Laboratorium 2025/2026</h3>
-                        <p class="text-sm md:text-base text-gray-300">Berdedikasi untuk kemajuan riset dan pendidikan fisika terapan.</p>
-                    </div>
-                </div>
+        
+        <!-- HERO BANNER FULL SCREEN (CHANDRA ASRI STYLE) -->
+        <div class="relative w-full h-[80vh] md:h-screen flex items-center justify-start overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="Foto%20Kepengurusan.jpeg" alt="Foto Kepengurusan Lab" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                <!-- Gradient Overlay untuk teks agar terbaca -->
+                <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent"></div>
             </div>
 
-            <div class="grid grid-cols-1 gap-8">
+            <!-- Text Content over Image -->
+            <div class="relative z-10 w-full max-w-7xl mx-auto px-5 md:px-10 mt-16 md:mt-0">
+                <div class="max-w-2xl">
+                    <span class="text-cyan-400 font-bold tracking-[0.3em] text-xs md:text-sm mb-4 block uppercase" data-i18n="about_subtitle">PROFIL LABORATORIUM</span>
+                    <h1 class="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-tight mb-6 text-white" data-i18n="about_title">
+                        Tentang Kami
+                    </h1>
+                    <p class="text-base md:text-xl text-gray-200 leading-relaxed text-justify mb-8 border-l-4 border-cyan-500 pl-6" data-i18n="about_desc">
+                        Laboratorium di Perguruan Tinggi merupakan salah satu komponen yang sangat penting dalam mewujudkan fungsi dari Tridharma Perguruan Tinggi. Laboratorium Fisika Fakultas Teknik Universitas Sultan Ageng Tirtayasa (UNTIRTA) sendiri merupakan laboratorium di bawah naungan Fakultas Teknik UNTIRTA yang mewadahi segala kegiatan terkait bidang fisika guna menjalankan Tridharma Perguruan Tinggi itu sendiri.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- VISI & MISI SECTION -->
+        <div class="content-box py-20 px-5 md:px-0">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                 <!-- Visi -->
-                <div class="glass p-6 md:p-8 border-l-4 border-cyan-500">
-                    <h3 class="text-xl md:text-2xl font-bold mb-4 text-white" data-i18n="vision_title">VISI</h3>
-                    <p class="text-sm md:text-base text-gray-400 leading-relaxed text-justify" data-i18n="vision_desc">
+                <div class="glass p-8 md:p-12 border-l-4 border-cyan-500">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-white" data-i18n="vision_title">VISI</h3>
+                    <p class="text-base md:text-lg text-gray-300 leading-relaxed text-justify" data-i18n="vision_desc">
                         Menjadikan laboratorium fisika terapan sebagai sarana pengajaran dan pengembangan yang berkualitas serta berintegritas dengan menjunjung tinggi profesionalitas untuk menjadikan mahasiswa yang unggul dan kompeten, sebagai bentuk membantu mewujudkan visi dan misi fakultas teknik Untirta.
                     </p>
                 </div>
 
                 <!-- Misi -->
-                <div class="glass p-6 md:p-8 border-l-4 border-white">
-                    <h3 class="text-xl md:text-2xl font-bold mb-4 text-white" data-i18n="mission_title">MISI</h3>
-                    <ul class="list-disc list-outside ml-5 text-sm md:text-base text-gray-400 space-y-3 text-justify" data-i18n="mission_list">
+                <div class="glass p-8 md:p-12 border-l-4 border-white">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-white" data-i18n="mission_title">MISI</h3>
+                    <ul class="list-disc list-outside ml-5 text-base md:text-lg text-gray-300 space-y-4 text-justify" data-i18n="mission_list">
                         <li>Mendorong budaya kolaboratif dengan meningkatkan inisiatif dan kepedulian antar asisten demi tercapainya kinerja tim yang saling mendukung.</li>
                         <li>Menjadi fasilitator yang TOP (tanggungjawab, objektif, dan profesional) dalam berjalannya kegiatan praktikum.</li>
                         <li>Menjalin kerja sama dan komunikasi yang baik secara internal maupun eksternal.</li>
@@ -308,8 +321,8 @@
                 </div>
             </div>
             
-            <div class="mt-12 text-center">
-                 <button onclick="switchPage('home')" class="px-6 py-2 border border-white/30 rounded-full text-sm font-bold hover:bg-white hover:text-black transition" data-i18n="btn_back_home">
+            <div class="mt-20 text-center">
+                 <button onclick="switchPage('home')" class="px-8 py-3 border border-white/30 rounded-full text-sm font-bold hover:bg-white hover:text-black transition" data-i18n="btn_back_home">
                     ← Kembali ke Beranda
                 </button>
             </div>
@@ -328,7 +341,7 @@
                 <!-- Studi Banding -->
                 <div class="glass p-0 overflow-hidden group rounded-xl">
                     <div class="h-56 bg-gray-800 relative overflow-hidden">
-                        <!-- Image Fallback to Placeholder if not found -->
+                        <!-- Menggunakan nama file persis dari screenshot -->
                         <img src="Studi%20Banding.jpeg" alt="Studi Banding" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                         <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-bold bg-gray-900" style="display: none;">
                             <span data-i18n="img_placeholder">Image Here</span>
@@ -338,13 +351,14 @@
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 group-hover:text-cyan-400 transition" data-i18n="act_title_1">Studi Banding Institusi</h3>
                         <p class="text-sm text-gray-400 mb-4" data-i18n="act_desc_1">Pertukaran wawasan manajerial dan operasional dengan laboratorium universitas lain untuk peningkatan mutu.</p>
-                        <span class="text-[10px] bg-white/10 px-2 py-1 rounded text-cyan-300">2025</span>
+                        <span class="text-[10px] bg-white/10 px-2 py-1 rounded text-cyan-300">2026</span>
                     </div>
                 </div>
 
                 <!-- Sosialisasi Praktikum -->
                 <div class="glass p-0 overflow-hidden group rounded-xl">
                     <div class="h-56 bg-gray-800 relative overflow-hidden">
+                        <!-- Menggunakan nama file persis dari screenshot -->
                         <img src="Sosialisasi%20Praktikum.jpeg" alt="Sosialisasi Praktikum" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                         <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-bold bg-gray-900" style="display: none;">
                             <span data-i18n="img_placeholder">Image Here</span>
@@ -354,13 +368,14 @@
                     <div class="p-6">
                         <h3 class="font-bold text-xl mb-2 group-hover:text-cyan-400 transition" data-i18n="act_title_2">Sosialisasi & Orientasi</h3>
                         <p class="text-sm text-gray-400 mb-4" data-i18n="act_desc_2">Pemaparan alur, tata tertib, dan prosedur keselamatan kerja (K3) praktikum kepada praktikan.</p>
-                        <span class="text-[10px] bg-white/10 px-2 py-1 rounded text-cyan-300">2025</span>
+                        <span class="text-[10px] bg-white/10 px-2 py-1 rounded text-cyan-300">2026</span>
                     </div>
                 </div>
 
                 <!-- Asistensi Praktikum -->
                 <div class="glass p-0 overflow-hidden group rounded-xl">
                     <div class="h-56 bg-gray-800 relative overflow-hidden">
+                        <!-- Menggunakan nama file persis dari screenshot -->
                         <img src="Asistensi.jpeg" alt="Asistensi Praktikum" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                         <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-bold bg-gray-900" style="display: none;">
                             <span data-i18n="img_placeholder">Image Here</span>
@@ -684,7 +699,7 @@
                 link_tool_loan: "Formulir Peminjaman Alat →",
                 about_subtitle: "PROFIL LABORATORIUM",
                 about_title: "Tentang Kami",
-                about_desc: "Laboratorium di Perguruan Tinggi merupakan salah satu komponen yang sangat penting dalam mewujudkan fungsi dari Tridharma Perguruan Tinggi. Laboratorium merupakan sarana bagi mahasiswa dan dosen untuk melakukan kegiatan pendidikan, penelitian dan layanan kepada masyarakat. Laboratorium Fisika Fakultas Teknik Universitas Sultan Ageng Tirtayasa (UNTIRTA) sendiri merupakan laboratorium di bawah naungan Fakultas Teknik UNTIRTA yang mewadahi segala kegiatan terkait bidang fisika guna menjalankan Tridharma Perguruan Tinggi itu sendiri.",
+                about_desc: "Laboratorium di Perguruan Tinggi merupakan salah satu komponen yang sangat penting dalam mewujudkan fungsi dari Tridharma Perguruan Tinggi. Laboratorium Fisika Fakultas Teknik Universitas Sultan Ageng Tirtayasa (UNTIRTA) sendiri merupakan laboratorium di bawah naungan Fakultas Teknik UNTIRTA yang mewadahi segala kegiatan terkait bidang fisika guna menjalankan Tridharma Perguruan Tinggi itu sendiri.",
                 vision_title: "VISI",
                 vision_desc: "Menjadikan laboratorium fisika terapan sebagai sarana pengajaran dan pengembangan yang berkualitas serta berintegritas dengan menjunjung tinggi profesionalitas untuk menjadikan mahasiswa yang unggul dan kompeten, sebagai bentuk membantu mewujudkan visi dan misi fakultas teknik Untirta.",
                 mission_title: "MISI",
